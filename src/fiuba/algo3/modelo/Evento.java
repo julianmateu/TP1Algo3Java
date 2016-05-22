@@ -13,4 +13,8 @@ public class Evento {
 	public Fecha getFecha() {
 		return mFecha;
 	}
+	
+	public String getNombre() {
+		return mNombre;
+	}
 }

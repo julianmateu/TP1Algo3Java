@@ -16,9 +16,9 @@ public class Fecha {
 		mCalendar = calendar;
 	}
 	
-	public Fecha sumarSemana() {
+	public Fecha sumarSemanas(int semanas) {
 		GregorianCalendar calendar = (GregorianCalendar) mCalendar.clone();
-		calendar.add(Calendar.DAY_OF_MONTH, 7);
+		calendar.add(Calendar.DAY_OF_MONTH, 7*semanas);
 		return new Fecha(calendar);
 	}
 		
