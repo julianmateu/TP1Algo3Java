@@ -9,7 +9,7 @@ import fiuba.algo3.modelo.Evento;
 import fiuba.algo3.modelo.Fecha;
 import fiuba.algo3.modelo.InvitadoInexistenteException;
 
-public class DirectorioTests {
+public class DirectorioTest {
 
 	@Test(expected=InvitadoInexistenteException.class)
 	public void testAgregarEventoAInvitadoInexistenteLanzaExcepcion() {

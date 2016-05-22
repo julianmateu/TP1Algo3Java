@@ -9,7 +9,7 @@ import org.junit.Test;
 import fiuba.algo3.modelo.Calendario;
 import fiuba.algo3.modelo.RecursoOcupadoException;
 
-public class CalendarioTests {
+public class CalendarioTest {
 
 	@Test
 	public void test01agregarPersonas() {
