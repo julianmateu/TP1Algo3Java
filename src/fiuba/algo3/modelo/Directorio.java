@@ -83,7 +83,7 @@ public class Directorio {
 	 */
 	public boolean estaOcupado(String nombre, Fecha fecha) {
 		if(!this.existeInvitado(nombre)) {
-			throw new InvitadoInexistenteExcepcion(
+			throw new InvitadoInexistenteException(
 					"No existe el invitado: " + nombre);
 		}
 		for (Invitado invitado : mListaDeInvitados) {
@@ -105,7 +105,7 @@ public class Directorio {
 	public void agregarEvento(Evento evento, List<String> invitados){
 		for (String nombre : invitados) {
 			if(!this.existeInvitado(nombre)) {
-				throw new InvitadoInexistenteExcepcion(
+				throw new InvitadoInexistenteException(
 						"No existe el invitado: " + nombre);
 			}
 			for (Invitado invitado : mListaDeInvitados) {

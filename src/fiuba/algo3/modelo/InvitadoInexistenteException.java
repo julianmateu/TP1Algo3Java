@@ -8,12 +8,12 @@ package fiuba.algo3.modelo;
  * @version	1.0
  * 
  */
-public class InvitadoInexistenteExcepcion extends RuntimeException {
+public class InvitadoInexistenteException extends RuntimeException {
 
 	/**
 	 * Constructor.
 	 */
-    public InvitadoInexistenteExcepcion(String message) {
+    public InvitadoInexistenteException(String message) {
         super(message);
     }
 }

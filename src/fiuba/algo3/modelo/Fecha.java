@@ -1,7 +1,9 @@
 package fiuba.algo3.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
 
 /**
  * Clase básica para manejo de fechas. Se asume que todas las fechas son
@@ -19,12 +21,15 @@ public class Fecha {
 	// El manejo interno de las fechas se hace con la clase 
 	// GregorianCalendar.
 	private GregorianCalendar mCalendar;
+
 	
 	/**
 	 * Constructor.
 	 */
 	public Fecha(int anio, int mes, int dia, int hora) {
-		mCalendar = new GregorianCalendar(anio, mes, dia, hora, MINUTO_0);
+		// Los meses en Java van de 0 a 11 !!
+		mCalendar = new GregorianCalendar(anio, mes - 1, dia, hora,
+				MINUTO_0);
 	}
 	
 	/**
@@ -42,7 +47,7 @@ public class Fecha {
 	 */
 	public Fecha sumarSemanas(int semanas) {
 		GregorianCalendar calendar = (GregorianCalendar) mCalendar.clone();
-		calendar.add(Calendar.WEEK_OF_MONTH, semanas);
+		calendar.add(Calendar.DAY_OF_YEAR, 7*semanas);
 		return new Fecha(calendar);
 	}
 	
@@ -52,5 +57,18 @@ public class Fecha {
 	 */
 	public boolean equals(Fecha fecha) {
 		return this.mCalendar.equals(fecha.mCalendar);
+	}
+	
+	/**
+	 * Método para convertir la fecha a un string de la forma
+	 * año/mes/dia : hora, por ejemplo 2016/05/22 : 10.
+	 */
+	@Override
+	public String toString() {
+		SimpleDateFormat formatter =
+				new SimpleDateFormat("yyyy/MMM/dd : HH");
+		// Setear la zona horaria a la misma del calendario.
+		formatter.setTimeZone(mCalendar.getTimeZone());
+		return formatter.format(mCalendar.getTime());
 	}
 }
