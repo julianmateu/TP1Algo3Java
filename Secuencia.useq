@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="org.mortbay.jetty.security.HashUserRealm.User" project="TP1Algo3Java" 
+    file="/TP1Algo3Java/libs/jetty-jar-6.1.14.jar" binary="true" label="user" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="285" y="0"/>    
+    <execution id="2">      
+      <position height="255" width="0" x="0" y="139"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="fiuba.algo3.modelo.Calendario" project="TP1Algo3Java" 
+    file="/TP1Algo3Java/src/fiuba/algo3/modelo/Calendario.java" binary="false" label="calendario" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="4">      
+      <position height="217" width="0" x="0" y="158"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="107" width="0" x="0" y="249"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="fiuba.algo3.modelo.Invitado" project="TP1Algo3Java" 
+    file="/TP1Algo3Java/src/fiuba/algo3/modelo/Invitado.java" binary="false" label="invitado" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="13">      
+      <position height="19" width="0" x="0" y="318"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="fiuba.algo3.modelo.Evento" project="TP1Algo3Java" 
+    file="/TP1Algo3Java/src/fiuba/algo3/modelo/Evento.java" binary="false" label="evento" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="11">      
+      <position height="19" width="0" x="0" y="275"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="fiuba.algo3.modelo.Fecha" project="TP1Algo3Java" 
+    file="/TP1Algo3Java/src/fiuba/algo3/modelo/Fecha.java" binary="false" label="fecha" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="7">      
+      <position height="19" width="0" x="0" y="183"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="agregarEvento(java.lang.String,java.util.List&lt;java.lang.String&gt;,int,int,int,int):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="Fecha(int,int,int,int)" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" 
+    operation="agregarEvento(java.lang.String,java.util.List&lt;java.lang.String&gt;,fiuba.algo3.modelo.Fecha):void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="Evento(java.lang.String,fiuba.algo3.modelo.Fecha)" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="agregarEvento(fiuba.algo3.modelo.Evento):void" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>
+</sequence-diagram>
